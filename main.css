@@ -1,9 +1,12 @@
-body {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
   font-family: "PT Sans Caption", sans-serif;
   background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
 
 
@@ -47,8 +50,7 @@ header input {
   align-items: center;
 }
 
-.hero-section,
-.description-section{
+.drop-bar {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -69,7 +71,9 @@ header input {
   border-radius: 60px;
   padding: 0 20px;
   border: 4px solid #818181;
+  text-decoration: none;
 }
+
 
 .line {
   width: 100%;
@@ -83,6 +87,7 @@ header input {
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   margin-bottom: 80px;
+  padding: 0 20px 0 20px;
 }
 
 .card {
@@ -94,8 +99,13 @@ header input {
   border: 2px solid #818181;
   border-radius: 20px;
   margin: 10px;
-  max-width: 700px;
+  max-width: 650px;
   height: 400px;
+  transition: transform .2s ease-in-out
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
@@ -119,12 +129,16 @@ header input {
 
 }
 
-.Analysts h3, .Explorers h3{
-    left: 24%;
+.Analysts h3,
+.Explorers h3 {
+  left: 24%;
 }
-.Diplomats h3, .Sentinels h3{
-    left: 16%;
+
+.Diplomats h3,
+.Sentinels h3 {
+  left: 16%;
 }
+
 .Diplomats .Analysts .Sentinels .Explorers {
   background: #FFF;
 }
@@ -141,6 +155,7 @@ header input {
 .Analysts {
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgba(252, 158, 255, 1) 100%);
 }
+
 .Analysts h3::after {
   content: url(/img/icon/analysts.png);
   align-items: center;
@@ -149,6 +164,7 @@ header input {
 .Sentinels {
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgba(158, 228, 255, 1) 100%);
 }
+
 .Sentinels h3::after {
   content: url(/img/icon/sentinel.png);
   align-items: center;
@@ -157,7 +173,51 @@ header input {
 .Explorers {
   background: radial-gradient(circle, rgba(255, 255, 255, 1) 60%, rgba(247, 255, 158, 1) 100%);
 }
+
 .Explorers h3::after {
   content: url(/img/icon/explorer.png);
   align-items: center;
+}
+
+.description-section,
+.video-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 80px;
+
+}
+
+.video-section {
+  padding: 10px 30px;
+}
+
+.video-section video,
+.video-section img {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 20px;
+}
+
+.description-section article {
+  font-size: 24px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  border-left: 20px solid #818181;
+}
+
+.description-section img {
+  width: 100%;
+  max-width: 400px;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+.aestetic-section {
+  margin: 20px auto;
+  justify-self: center;
+  border-radius: 20px;
 }
