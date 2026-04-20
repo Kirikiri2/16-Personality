@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Personality type</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Archivo+Black&family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-container">
+            <img class="header__logo-img" src="../img/picture/logo.png" alt="logo">
+            <h2>MBTI Library</h2>
+        </div>
+
+        <div class="header__nav-bar">
+            <a href="#" class="header__nav-link">Home</a>
+            <a href="#" class="header__nav-link">Library</a>
+            <a href="#" class="header__nav-link">About</a>
+        </div>
+        
+        <input class="header__search" name="search" type="text" placeholder="Search for..." />
+        
+        <select class="header__burger" id="burger">
+            <option value="" disabled selected>Menu</option>
+            <option value="#">Home</option>
+            <option value="#">Library</option>
+            <option value="#">About</option>
+        </select>
+    </header>
+
+    <main>
+        <section class="drop-bar">
+            <div class="drop-bar__line"></div>
+            <span class="drop-bar__title">What is your MBTI?</span>
+        </section>
+
+        <section class="choice-section">
+            <div class="choice-section__card choice-section__card--diplomats">
+                <h3 class="choice-section__card-title">Diplomats</h3>
+            </div>
+            <div class="choice-section__card choice-section__card--analysts">
+                <h3 class="choice-section__card-title">Analysts</h3>
+            </div>
+            <div class="choice-section__card choice-section__card--sentinels">
+                <h3 class="choice-section__card-title">Sentinels</h3>
+            </div>
+            <div class="choice-section__card choice-section__card--explorers">
+                <h3 class="choice-section__card-title">Explorers</h3>
+            </div>
+        </section>
+
+        <section class="drop-bar">
+            <div class="drop-bar__line"></div>
+            <span class="drop-bar__title">What it is?</span>
+        </section>
+
+        <section class="description-section">
+            <article class="description-section__article">
+                The Myers–Briggs Type Indicator (MBTI) is a personality assessment created by Katharine Cook Briggs
+                and her daughter Isabel Briggs Myers in the mid-20th century. It was inspired by Carl Jung’s theory
+                of psychological types. The purpose of MBTI is not to diagnose people but to help them understand
+                their natural preferences in thinking, decision-making, and interacting with others.
+            </article>
+            <img class="description-section__img" src="../img/picture/IsabelBriggsMyers.jpg" alt="Isabel Briggs Myers">
+        </section>
+
+        <section class="drop-bar">
+            <div class="drop-bar__line"></div>
+            <span class="drop-bar__title">How it works?</span>
+        </section>
+
+        <section class="video-section">
+            <video class="video-section__media" autoplay loop muted src="../img/picture/stock-footage-who-am-i-phrase-close-up-being-typing-and-centered-on-a-sheet-of-paper-on-old-vintage-typewriter.webm"></video>
+            <img class="video-section__media" src="../img/picture/Краткая справка по MBTI.jpeg" alt="MBTI Guide">
+        </section>
+
+        <section class="drop-bar">
+            <a href="https://www.16personalities.com/free-personality-test" class="drop-bar__title drop-bar__link">Test yourself</a>
+        </section>
+
+        <section class="aesthetic-section">
+            <iframe frameborder="0" allow="clipboard-write" style="border:none;width:680px;height:250px;" width="680" height="250" src="https://music.yandex.ru/iframe/album/37715162/track/141683228">
+                Слушайте <a href="https://music.yandex.ru/track/141683228?utm_source=desktop&utm_medium=copy_link">John Wayne</a> — <a href="https://music.yandex.ru/artist/5944620">Cigarettes After Sex</a> на Яндекс Музыке
+            </iframe>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+</body>
+
+</html>

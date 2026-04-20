@@ -1,0 +1,270 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+/* Блок header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin-bottom: 15px;
+}
+
+.header__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__logo-img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.header__nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  column-gap: 120px;
+  align-items: center;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+}
+
+.header__search {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 30px 5px 10px;
+}
+
+.header__burger {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .header__nav-bar {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+
+/* Блок drop-bar */
+.drop-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.drop-bar__line {
+  width: 100%;
+  border-bottom: 4px solid #818181;
+  overflow: hidden;
+  position: relative;
+}
+
+.drop-bar__title {
+  font-family: "Archivo Black", sans-serif;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 56px;
+  font-weight: 500;
+  background: rgb(255, 255, 255);
+  border-radius: 60px;
+  padding: 0 20px;
+  border: 4px solid #818181;
+  text-decoration: none;
+}
+
+.drop-bar__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1300px) {
+  .drop-bar__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 850px) {
+  .drop-bar__title {
+    font-size: 28px;
+    bottom: -20px;
+  }
+}
+
+/* Блок choice-section */
+.choice-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  width: 100%;
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.choice-section__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 2px solid #818181;
+  border-radius: 20px;
+  margin: 10px;
+  width: 650px;
+  height: 400px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.choice-section__card:hover {
+  transform: scale(1.05);
+}
+
+.choice-section__card-img {
+  width: 100%;
+  border-radius: 19px;
+}
+
+.choice-section__card-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  position: absolute;
+  top: 25%;
+  z-index: 2;
+  transform: translateY(50%);
+  text-align: center;
+  margin: 8px 0;
+  color: black;
+  font-size: 64px;
+}
+
+/* Модификаторы карточек */
+.choice-section__card--analysts {
+  background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(252, 158, 255) 100%);
+}
+.choice-section__card--analysts .choice-section__card-title::after {
+  content: url("../img/icon/analysts.png"); /* Проверьте путь */
+  align-items: center;
+}
+
+.choice-section__card--diplomats {
+  background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(147, 255, 135) 100%);
+}
+.choice-section__card--diplomats .choice-section__card-title::after {
+  content: url("../img/icon/diplomats.png");
+  align-items: center;
+}
+
+.choice-section__card--explorers {
+  background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(247, 255, 158) 100%);
+}
+.choice-section__card--explorers .choice-section__card-title::after {
+  content: url("../img/icon/explorer.png");
+  align-items: center;
+}
+
+.choice-section__card--sentinels {
+  background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(158, 228, 255) 100%);
+}
+.choice-section__card--sentinels .choice-section__card-title::after {
+  content: url("../img/icon/sentinel.png");
+  align-items: center;
+}
+
+/* Позиционирование заголовков внутри карточек (можно добавить модификаторы, но для простоты оставим так) */
+.choice-section__card--analysts .choice-section__card-title,
+.choice-section__card--explorers .choice-section__card-title {
+  left: 24%;
+}
+.choice-section__card--diplomats .choice-section__card-title,
+.choice-section__card--sentinels .choice-section__card-title {
+  left: 16%;
+}
+
+@media (max-width: 1380px) {
+  .choice-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Блок description-section */
+.description-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 80px;
+}
+
+.description-section__article {
+  font-size: 24px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  border-left: 20px solid #818181;
+}
+
+.description-section__img {
+  width: 100%;
+  max-width: 400px;
+  margin-right: auto;
+  border-radius: 20px;
+}
+
+/* Блок video-section */
+.video-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin-bottom: 80px;
+}
+
+.video-section__media {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 20px;
+}
+
+@media (max-width: 1380px) {
+  .video-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* Блок aesthetic-section */
+.aesthetic-section {
+  margin: 20px auto;
+  justify-self: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.aesthetic-section iframe {
+  border-radius: 20px;
+}
