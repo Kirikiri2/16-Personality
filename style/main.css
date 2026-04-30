@@ -143,28 +143,28 @@ header #burger {
   background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(252, 158, 255) 100%);
 }
 .choise-section .card.Analysts h3::after {
-  content: url("./img/icon/analysts.png");
+  content: url("../img/icon/analysts.png");
   align-items: center;
 }
 .choise-section .card.Diplomats {
   background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(147, 255, 135) 100%);
 }
 .choise-section .card.Diplomats h3::after {
-  content: url("./img/icon/diplomats.png");
+  content: url("../img/icon/diplomats.png");
   align-items: center;
 }
 .choise-section .card.Explorers {
   background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(247, 255, 158) 100%);
 }
 .choise-section .card.Explorers h3::after {
-  content: url("./img/icon/explorer.png");
+  content: url("../img/icon/explorer.png");
   align-items: center;
 }
 .choise-section .card.Sentinels {
   background: radial-gradient(circle, rgb(255, 255, 255) 60%, rgb(158, 228, 255) 100%);
 }
 .choise-section .card.Sentinels h3::after {
-  content: url("./img/icon/sentinel.png");
+  content: url("../img/icon/sentinel.png");
   align-items: center;
 }
 @media (max-width: 1380px) {
