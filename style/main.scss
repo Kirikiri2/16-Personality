@@ -151,16 +151,16 @@ header {
     font-size: 64px;
   }
   &.Analysts{
-    @include card-core(rgba(252, 158, 255, 1),"/img/icon/analysts.png" );
+    @include card-core(rgba(252, 158, 255, 1),"../img/icon/analysts.png" );
   }
   &.Diplomats{
-    @include card-core(rgba(147, 255, 135, 1),"/img/icon/diplomats.png" );
+    @include card-core(rgba(147, 255, 135, 1),"../img/icon/diplomats.png" );
   }
   &.Explorers{
-    @include card-core(rgba(247, 255, 158, 1),"/img/icon/explorer.png" );
+    @include card-core(rgba(247, 255, 158, 1),"../img/icon/explorer.png" );
   }
   &.Sentinels{
-    @include card-core(rgba(158, 228, 255, 1),"/img/icon/sentinel.png" );
+    @include card-core(rgba(158, 228, 255, 1),"../img/icon/sentinel.png" );
   }
 }
   @media (max-width: 1380px) {
